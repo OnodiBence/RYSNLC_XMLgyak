@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RYSNLC_orarend>
+    <ora id="1" típus="előadás">
+        <targy>Angol nyelv nyelvvizsga előkészítő szint I.</targy>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>12:00</tol>
+            <ig>14:00</ig>
+        </idopont>
+        <helyszin>A1/207</helyszin>
+        <oktato>Holló-Vaskó Csaba</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+    <ora id="2" típus="előadás">
+        <targy>Web technológiák I.</targy>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>14:00</tol>
+            <ig>16:00</ig>
+        </idopont>
+        <helyszin>A1/305</helyszin>
+        <oktato>Agárdi Anita</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+</RYSNLC_orarend>
