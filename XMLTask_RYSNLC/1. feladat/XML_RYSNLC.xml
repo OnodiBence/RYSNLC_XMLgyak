@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RYSNLC_pizzeria>
+    <!-- INGREDIENTS -->
+    <ingredients>
+      <ingredient ingredient_id="1" name="Sonka" type="Feltét" purchasePrice="150" stockQuantity="1000" />
+      <ingredient ingredient_id="2" name="Paradicsoszósz" type="Szósz" purchasePrice="200" stockQuantity="800" />
+      <ingredient ingredient_id="3" name="Sajt" type="Cheese" purchasePrice="300" stockQuantity="500" />
+      <ingredient ingredient_id="4" name="Kukorica" type="Feltét" purchasePrice="120" stockQuantity="500" />
+      <ingredient ingredient_id="5" name="Gomba" type="Feltét" purchasePrice="180" stockQuantity="500" />
+    </ingredients>
+  
+    <!-- PRODUCTS -->
+    <products>
+      <product product_id="1" name="Sonkás Pizza" price="2490" type="Pizza" description="Klasszikus sonkás pizza" />
+      <product product_id="2" name="Margaréta Pizza" price="2190" type="Pizza" description="Klasszikus pizza" />
+      <product product_id="3" name="Songoku Pizza" price="3150" type="Pizza" description="SON-GOmba-KUkorica" />
+    </products>
+  
+    <!-- ORDERS -->
+    <orders>
+      <order order_id="1" date="2023-12-01" price="4980" status="Kifizetve">
+        <items>
+          <item product_id="1" quantity="2" />
+        </items>
+      </order>
+      <order order_id="1" date="2023-12-02" price="3150" status="Nincs kifizetve">
+        <items>
+          <item product_id="3" quantity="2" />
+        </items>
+      </order>
+      <order order_id="1" date="2023-12-03" price="2190" status="Kifizetve">
+        <items>
+          <item product_id="2" quantity="1" />
+        </items>
+      </order>
+    </orders>
+  
+    <!-- CUSTOMERS -->
+    <customers>
+      <customer customer_id="1" name="John Doe" phoneNumber="123456789" email="john.doe@example.com" regularCustomer="true">
+        <address postalCode="1234" street="Main Street" houseNumber="1" doorNumber="2" />
+      </customer>
+      <customer customer_id="2" name="Doe John" phoneNumber="123456789" email="doe.john@example.com" regularCustomer="false">
+        <address postalCode="4321" street="Second Street" houseNumber="14" doorNumber="" />
+      </customer>
+      <customer customer_id="3" name="Dohn Joe" phoneNumber="123456789" email="dohn.joe@example.com" regularCustomer="true">
+        <address postalCode="2143" street="Third Street" houseNumber="125" doorNumber="" />
+      </customer>
+    </customers>
+  
+    <!-- COURIERS -->
+    <couriers>
+      <courier courier_id="1" name="Jane Courier" phoneNumber="987654321" transportType="Car" isActive="true" />
+      <courier courier_id="2" name="Jobe Courier" phoneNumber="987654321" transportType="Bicycle" isActive="false" />
+      <courier courier_id="3" name="John Courier" phoneNumber="987654321" transportType="Car" isActive="true" />
+    </couriers>
+  
+    <!-- Relation: ORDERED_ITEMS -->
+    <ordered_items order_id="1" product_id="1" orderingDate="2023-12-01" >
+        <orderingDate>2023-12-01</orderingDate>
+    </ordered_items>
+    <ordered_items order_id="2" product_id="1" orderingDate="2023-12-02" >
+        <orderingDate>2023-12-02</orderingDate>
+    </ordered_items>
+    <ordered_items order_id="3" product_id="1" orderingDate="2023-12-03" >
+        <orderingDate>2023-12-03</orderingDate>
+    </ordered_items>
+  
+    <!-- Relation: COURIER_DEMAND -->
+    <courier_demand order_id="1" courier_id="1">
+      <orderingDate>2023-12-01</orderingDate>
+    </courier_demand>
+  
+    <!-- Relation: CREATE_ORDER -->
+    <create_order order_id="1" customer_id="1">
+      <orderingDate>2023-12-01</orderingDate>
+    </create_order>
+    <create_order order_id="2" customer_id="2">
+      <orderingDate>2023-12-02</orderingDate>
+    </create_order>
+    <create_order order_id="3" customer_id="3">
+      <orderingDate>2023-12-03</orderingDate>
+    </create_order>
+  </RYSNLC_pizzeria>
+  
