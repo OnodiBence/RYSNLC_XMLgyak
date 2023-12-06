@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Órarend</p>
+<p id="targy"></p>
+<p id="helyszin"></p>
+<p id="oktato"></p>
+<p id="szak"></p>
+<script>
+    const txt = '{"RYSNLC_orarend":{"ora":[{"@tipus":"eloadas","targy":"Adatkezelés XML-ben","oktato":"Dr. Bednarik László","szak":"Programtervező Informatikus","idopont":{"tol":"12:00","nap":"Kedd","ig":"14:00"},"@id":"1","helyszin":"XXXII A1 magasfsz"},{"@tipus":"gyakorlat","targy":"Adatkezelés XML-ben","oktato":"Dr. Bednarik LĂˇszlĂł","szak":"Programtervező Informatikus","idopont":{"tol":"12:00","nap":"Szerda","ig":"14:00"},"@id":"2","helyszin":"In\/101 In I. e. 101"}]}}'
+    const obj = JSON.parse(txt);
+    console.log(obj);
+    document.getElementById("targy").innerHTML = "Tárgy: "+obj.RYSNLC_orarend.ora[0].targy;
+    document.getElementById("helyszin").innerHTML = "Helyszín: "+obj.RYSNLC_orarend.ora[0].helyszin;
+    document.getElementById("oktato").innerHTML = "Oktató: "+obj.RYSNLC_orarend.ora[0].oktato;
+    document.getElementById("szak").innerHTML = "Szak: "+obj.RYSNLC_orarend.ora[0].szak;
+</script>
+
+</body>
+</html>
