@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+    <body>
+        <h2>Hallgatok adatai</h2>
+        <table border="4">
+            <tr bgcolor="#90EE90">
+              <th>ID</th>
+              <th>Vezeteknev</th>
+              <th>Keresztnev</th>
+              <th>Becenev</th>
+              <th>Kor</th>
+              <th>Osztondij</th>
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>Ónodi</td>
+              <td>Bence</td>
+              <td>Bence</td>
+              <td>22</td>
+              <td>45000</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Nagy</td>
+              <td>Lajos</td>
+              <td>Lajcsi</td>
+              <td>19</td>
+              <td>30000</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Kiss</td>
+              <td>Lilla</td>
+              <td>Lilike</td>
+              <td>23</td>
+              <td>46000</td>
+            </tr>
+          </table>
+    </body>
+</html>
