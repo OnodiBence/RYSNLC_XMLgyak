@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Pizzeria_RYSNLC xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchema_RYSNLC.xsd">
+
+    <!--Ingredients-->
+
+    <ingredients ingredient_id="1">
+        <name>Flour</name>
+        <type>Base</type>
+        <purchasePrice>500</purchasePrice>
+        <stockQuantity>1000</stockQuantity>
+    </ingredients>
+    
+    <ingredients ingredient_id="2">
+        <name>Sugar</name>
+        <type>Sweetener</type>
+        <purchasePrice>600</purchasePrice>
+        <stockQuantity>800</stockQuantity>
+    </ingredients>
+    
+    <ingredients ingredient_id="3">
+        <name>Milk</name>
+        <type>Dairy</type>
+        <purchasePrice>300</purchasePrice>
+        <stockQuantity>500</stockQuantity>
+    </ingredients>
+    
+    <ingredients ingredient_id="4">
+        <name>Tomatoes</name>
+        <type>Vegetable</type>
+        <purchasePrice>160</purchasePrice>
+        <stockQuantity>600</stockQuantity>
+    </ingredients>
+    
+    <ingredients ingredient_id="5">
+        <name>Chicken</name>
+        <type>Meat</type>
+        <purchasePrice>1200</purchasePrice>
+        <stockQuantity>300</stockQuantity>
+    </ingredients>
+
+    <ingredients ingredient_id="6">
+        <name>Fish</name>
+        <type>Fish</type>
+        <purchasePrice>1600</purchasePrice>
+        <stockQuantity>200</stockQuantity>
+    </ingredients>  
+
+    <!--Products-->
+
+    <product product_id="1">
+        <name>Spaghetti Bolognese</name>
+        <price>2400</price>
+        <type>Pasta</type>
+        <description>Classic spaghetti with Bolognese sauce.</description>
+    </product>
+    
+    <product product_id="2">
+        <name>Chicken Caesar Salad</name>
+        <price>2200</price>
+        <type>American</type>
+        <type>Salad</type>
+        <description>Healthy salad with grilled chicken and Caesar dressing.</description>
+    </product>
+    
+    <product product_id="3">
+        <name>Sushi Combo</name>
+        <price>3700</price>
+        <type>Japanese</type>
+        <type>Sushi</type>
+        <description>Assorted sushi rolls and sashimi in a combo.</description>
+    </product>
+
+    <!--Made of kapcsolat-->
+
+    <made_of ingredient_id="1" product_id="1"/>
+    <made_of ingredient_id="4" product_id="1"/>
+    <made_of ingredient_id="5" product_id="1"/>
+
+    <made_of ingredient_id="5" product_id="2"/>
+    <made_of ingredient_id="4" product_id="2"/>
+
+    <made_of ingredient_id="6" product_id="3"/>
+
+    <!--Orders-->
+
+    <order order_id="4">
+        <date>2023.12.12</date>
+        <price>4600</price>
+        <item>Spaghetti Bolognese</item>
+        <item>Chicken Caesar Salad</item>
+        <status>Completed</status>
+    </order>
+    
+    <order order_id="2">
+        <date>2023.02.02</date>
+        <price>2200</price>
+        <item>Chicken Caesar Salad</item>
+        <status>Processing</status>
+    </order>
+    
+    <order order_id="3">
+        <date>2023.03.10</date>
+        <price>5600</price>
+        <item>Sushi Combo</item>
+        <item>Miso Soup</item>
+        <status>Shipping</status>
+    </order>    
+
+    <!--Order items kapcsolat-->
+
+    <ordered_items order_id="4" product_id="1">
+        <orderingDate>2023.01.15</orderingDate>
+    </ordered_items>
+
+    <ordered_items order_id="4" product_id="1">
+        <orderingDate>2023.02.02</orderingDate>
+    </ordered_items>
+
+    <ordered_items order_id="4" product_id="1">
+        <orderingDate>2023.03.10</orderingDate>
+    </ordered_items>
+
+    <!--Customers-->
+
+    <customer create_order="4" customer_id="1">
+        <name>John Doe</name>
+        <address>
+            <postalcode>12345</postalcode>
+            <street>Main Street</street>
+            <houseNumber>10</houseNumber>
+            <doorNumber>2</doorNumber>
+        </address>
+        <phoneNumber>06304565434</phoneNumber>
+        <email>john.doe@example.com</email>
+        <regularCustomer>true</regularCustomer>
+    </customer>
+    
+    <customer create_order="2" customer_id="2">
+        <name>Alice Smith</name>
+        <address>
+            <postalcode>54321</postalcode>
+            <street>Maple Avenue</street>
+            <houseNumber>5</houseNumber>
+            <doorNumber>1</doorNumber>
+        </address>
+        <phoneNumber>06704568978</phoneNumber>
+        <email>alice.smith@example.com</email>
+        <regularCustomer>false</regularCustomer>
+    </customer>
+    
+    <customer create_order="3" customer_id="3">
+        <name>Bob Johnson</name>
+        <address>
+            <postalcode>67890</postalcode>
+            <street>Pine Street</street>
+            <houseNumber>8</houseNumber>
+            <doorNumber>3</doorNumber>
+        </address>
+        <phoneNumber>06304239825</phoneNumber>
+        <email>bob.johnson@example.com</email>
+        <regularCustomer>true</regularCustomer>
+    </customer>
+
+    <!--Couriers-->
+
+    <courier courier_demand="4" courier_id="1">
+        <name>Mike Johnson</name>
+        <phoneNumber>+15551234567</phoneNumber>
+        <transportType>Bicycle</transportType>
+        <isActive>true</isActive>
+    </courier>
+    
+    <courier courier_demand="2" courier_id="2">
+        <name>Sara Davis</name>
+        <phoneNumber>+18882345678</phoneNumber>
+        <transportType>Car</transportType>
+        <isActive>true</isActive>
+    </courier>
+    
+    <courier courier_demand="3" courier_id="3">
+        <name>Chris Martinez</name>
+        <phoneNumber>+16667778888</phoneNumber>
+        <transportType>Motorcycle</transportType>
+        <isActive>true</isActive>
+    </courier>    
+
+</Pizzeria_RYSNLC>
