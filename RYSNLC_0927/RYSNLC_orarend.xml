@@ -45,4 +45,71 @@
         <oktato>Agárdi Anita</oktato>
         <szak>Programtervező informatikus</szak>
     </ora>
+    <óra id="5" típus="elmélet">
+        <kurzusnév>Adatkezelés XML-ben</kurzusnév>
+        <időpont>
+            <kezdet>12</kezdet>
+            <vég>14</vég>
+            <nap>Kedd</nap>
+        </időpont>
+        <oktató>Bednarik László</oktató>
+        <helyszín>XXXII. előadó</helyszín>
+        <szak>programtervező informatikus</szak>
+    </óra>
+    <óra id="6" típus="elmélet">
+        <kurzusnév>Algoritmusok és vizsgálatuk</kurzusnév>
+        <időpont>
+            <kezdet>14</kezdet>
+            <vég>16</vég>
+            <nap>Kedd</nap>
+        </időpont>
+        <oktató>Házy Attila</oktató>
+        <helyszín>A1/320</helyszín>
+        <szak>programtervező informatikus</szak>
+    </óra>
+    <óra id="7" típus="gyakorlat">
+        <kurzusnév>Algoritmusok és vizsgálatuk</kurzusnév>
+        <időpont>
+            <kezdet>16</kezdet>
+            <vég>18</vég>
+            <nap>Kedd</nap>
+        </időpont>
+        <oktató>Házy Attila</oktató>
+        <helyszín>A1/320</helyszín>
+        <szak>programtervező informatikus</szak>
+    </óra>
+
+    <óra id="8" típus="gyakorlat">
+        <kurzusnév>Adatkezelés XML-ben</kurzusnév>
+        <időpont>
+            <kezdet>12</kezdet>
+            <vég>14</vég>
+            <nap>Szerda</nap>
+        </időpont>
+        <oktató>Bednarik László</oktató>
+        <helyszín>Inf. 103</helyszín>
+        <szak>programtervező informatikus</szak>
+    </óra>
+    <óra id="9" típus="elmélet">
+        <kurzusnév>Vállalati információs rendszerek fejlesztése</kurzusnév>
+        <időpont>
+            <kezdet>14</kezdet>
+            <vég>16</vég>
+            <nap>Szerda</nap>
+        </időpont>
+        <oktató>Sasvári Péter</oktató>
+        <helyszín>Inf. 101</helyszín>
+        <szak>programtervező informatikus</szak>
+    </óra>
+    <óra id="10" típus="gyakorlat">
+        <kurzusnév>Vállalati információs rendszerek fejlesztése</kurzusnév>
+        <időpont>
+            <kezdet>18</kezdet>
+            <vég>20</vég>
+            <nap>Szerda</nap>
+        </időpont>
+        <oktató>Sasvári Péter</oktató>
+        <helyszín>Inf. 101</helyszín>
+        <szak>programtervező informatikus</szak>
+    </óra>
 </RYSNLC_orarend>

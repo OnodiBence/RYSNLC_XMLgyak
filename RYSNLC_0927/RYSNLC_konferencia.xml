@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<konferencia>
+    <cím>Konferencia Cime</cím>
+    <helyszín>Konferencia helyszine</helyszín>
+    <előadó>
+        <név>Előadó Neve</név>
+        <adószám>12345678</adószám>
+        <lakcím>Lakcim, Utca utca 9.</lakcím>
+    </előadó>
+    <dátum>2023. 09. 27.</dátum>
+    <hallgatók>
+        <hallgató>
+            <név>Hallgató Neve</név>
+            <lakcím>Lakcim, Utca utca 12.</lakcím>
+        </hallgató>
+    </hallgatók>
+</konferencia>
