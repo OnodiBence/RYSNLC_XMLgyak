@@ -1,269 +1,227 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-  <!--Egyszerű elemek-->
-  
-  <!--INGREDIENCES-->
-  <xs:element name="name" type="xs:string" />
-  <xs:element name="itype" type="xs:ingredientType" />
-  <xs:element name="purchasePrice" type="xs:int" />
-  <xs:element name="stockQuantity" type="xs:int" />
-  
-  <!--PRODUCT-->
-  <xs:element name="price" type="xs:int" />
-  <xs:element name="ptype" type="xs:productType" />
-  <xs:element name="description" type="xs:string" />
-  
-  <!--ORDER-->
-  <xs:element name="date" type="xs:date" />
-  <xs:element name="items" type="xs:string" />
-  <xs:element name="status" type="xs:booleanType" />
+    <!--Egyszerű elemek-->
 
-  <!--CUSTOMER-->
-  <xs:element name="postalCode" type="xs:int" />
-  <xs:element name="street" type="xs:string" />
-  <xs:element name="houseNumber" type="xs:int" />
-  <xs:element name="doorNumber" type="xs:int" />
-  <xs:element name="phoneNumber" type="xs:int" />
-  <xs:element name="email" type="xs:string" />
-  <xs:element name="regularCustomer" type="xs:booleanType" />
+    <xs:element name="name" type="xs:string" />
+    <xs:element name="type" type="ingredients_food_type" />
+    <xs:element name="purchasePrice" type="xs:int" />
+    <xs:element name="stockQuantity" type="xs:int" />
+    
+    <xs:element name="price" type="xs:int" />
+    <xs:element name="description" type="xs:string" />
 
-  <!--COURIER-->
-  <xs:element name="transportType" type="xs:courierType" />
-  <xs:element name="isActive" type="xs:booleanType" />
+    <xs:element name="date" type="idoTipus" />
+    <xs:element name="item" type="xs:string" />
+    <xs:element name="status" type="status_type" />
 
-  <xs:element name="orderingDate" type="xs:date" />
-  <!--Saját típusok-->
+    <xs:element name="orderingDate" type="idoTipus" />
 
-  <xs:simpleType name="booleanType">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="Igen" />
-        <xs:enumeration value="Nem" />      
-    </xs:restriction>
-  </xs:simpleType>
+    <xs:element name="postalcode" type="xs:int" />
+    <xs:element name="street" type="xs:string" />
+    <xs:element name="houseNumber" type="xs:int" />
+    <xs:element name="doorNumber" type="xs:int" />
+    <xs:element name="email" type="emailTipus" />
+    <xs:element name="phoneNumber" type="telefonszamTipus" />
 
-  <xs:simpleType name="date">
-    <xs:restriction base="xs:string">
-        <xs:pattern value="[0-9]:[0-9][0-9]" />
-    </xs:restriction>
-  </xs:simpleType>
+    <xs:element name="transportType" type="xs:string" />
+    <xs:element name="isActive" type="xs:string" />
 
-  <xs:simpleType name="ingredientType">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="Liszt" />
-        <xs:enumeration value="Paradicsomszósz" />
-        <xs:enumeration value="Bazsalikom" />
-        <xs:enumeration value="Prosciutto" />
-        <xs:enumeration value="Salame" />
-        <xs:enumeration value="Sajt" />
-        <xs:enumeration value="Kóla" />
-        <xs:enumeration value="Csirkehús" />
-        <xs:enumeration value="Kukorica" />
-        <xs:enumeration value="Ananász" />
-        <xs:enumeration value="Ásványviz" />
-        <xs:enumeration value="Élesztő" />
-    </xs:restriction>
-  </xs:simpleType>
+    <!--Saját típusok-->
 
-  <xs:simpleType name="productType">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="Marghareta" />
-        <xs:enumeration value="Prosciutto" />
-        <xs:enumeration value="Songoku" />
-        <xs:enumeration value="Kóla" />
-        <xs:enumeration value="Ásványviz" />
-        <xs:enumeration value="Bolognai" />
-        <xs:enumeration value="Hawai" />
-        <xs:enumeration value="Ferrari" />
-        <xs:enumeration value="Salames" />
-        <xs:enumeration value="Tejszines kapros" />
-        <xs:enumeration value="Bambino" />
-        <xs:enumeration value="Pelapolli" />
-    </xs:restriction>
-  </xs:simpleType>
-  
-  <xs:simpleType name="courierType">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="Autó" />
-        <xs:enumeration value="Kerékpár" />
-        <xs:enumeration value="Gyalog" />
-        <xs:enumeration value="Elvitel" />
-        <xs:enumeration value="Helyben" />
-        <xs:enumeration value="Motor" />
-    </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleType name="ingredients_food_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Base" />
+            <xs:enumeration value="Sweetener" />
+            <xs:enumeration value="Dairy" />
+            <xs:enumeration value="Vegetable" />
+            <xs:enumeration value="Meat" />
+            <xs:enumeration value="Fish" />
+            <xs:enumeration value="Pata" />
+            <xs:enumeration value="Italian" />
+            <xs:enumeration value="Salad" />
+            <xs:enumeration value="American" />
+            <xs:enumeration value="Japanese" />
+            <xs:enumeration value="Sushi" />
+        </xs:restriction>
+    </xs:simpleType>
 
-  <!--Felépítés-->
+    <xs:simpleType name="status_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Shipping" />
+            <xs:enumeration value="Processing" />
+            <xs:enumeration value="Completed" />
+        </xs:restriction>
+    </xs:simpleType>
 
-  <xs:element name="RYSNLC_pizzeria">
+    <xs:simpleType name="telefonszamTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(06(20|30|31|50|60|70)\d{7})"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="ingrediences" minOccurs="1" maxOccurs="unbounded">
-          <xs:complexType>
+    <xs:simpleType name="idoTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([12]\d{3}.(0[1-9]|1[0-2]).(0[1-9]|[12]\d|3[01]))" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emailTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[\w\.]+@([\w]+\.)+[\w]{2,4}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Felépítés-->
+
+    <xs:element name="Pizzeria_RYSNLC">
+        <xs:complexType>
             <xs:sequence>
-                <xs:element ref="name" />
-                <xs:element ref="type" />
-                <xs:element ref="purchasePrice" />
-                <xs:element ref="stockQuantity" />
+                <xs:element name="ingredients" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="name" />
+                            <xs:element name="type" />
+                            <xs:element ref="purchasePrice" />
+                            <xs:element ref="stockQuantity" />
+                        </xs:sequence>
+                        <xs:attribute name="ingredient_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="product" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="name" />
+                            <xs:element ref="price" />
+                            <xs:element ref="type" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element ref="description" />
+                        </xs:sequence>
+                        <xs:attribute name="product_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="made_of" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="ingredient_id" type="xs:int" />
+                        <xs:attribute name="product_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="order" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="date" />
+                            <xs:element ref="price" />
+                            <xs:element ref="item" minOccurs="1" maxOccurs="unbounded" />
+                            <xs:element ref="status" />
+                        </xs:sequence>
+                        <xs:attribute name="order_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ordered_items" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="orderingDate" />
+                        </xs:sequence>
+                        <xs:attribute name="product_id" type="xs:int" />
+                        <xs:attribute name="order_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="customer" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="name" />
+                            <xs:element name="address" minOccurs="1" maxOccurs="1" >
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="postalcode" />
+                                        <xs:element ref="street" />
+                                        <xs:element ref="houseNumber" />
+                                        <xs:element ref="doorNumber" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="phoneNumber" />
+                            <xs:element name="email" />
+                            <xs:element name="regularCustomer" />
+                        </xs:sequence>
+                        <xs:attribute name="customer_id" type="xs:int" />
+                        <xs:attribute name="create_order" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="courier" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="name" />
+                            <xs:element name="phoneNumber" />
+                            <xs:element name="transportType" />
+                            <xs:element name="isActive" />
+                        </xs:sequence>
+                        <xs:attribute name="courier_id" type="xs:int" />
+                        <xs:attribute name="courier_demand" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
-            <xs:attribute name="ingredient_id" type="xs:int" />
-            <xs:attribute name="made_of" type="xs:int" />
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
+        </xs:complexType>
 
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="product" minOccurs="1" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="name" />
-              <xs:element ref="price" />
-              <xs:element ref="type" />
-              <xs:element ref="description" />
-            </xs:sequence>
-            <xs:attribute name="product_id" type="xs:int" />
-            <xs:attribute name="made_of" type="xs:int" />
-            <xs:attribute name="ordered_items" type="xs:int" />
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
+        <!--Kulcsok-->
 
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="order" minOccurs="1" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="date" />
-              <xs:element ref="price" />
-              <xs:element ref="items" />
-              <xs:element ref="status" />
-            </xs:sequence>
-            <xs:attribute name="order_id" type="xs:int" />
-            <xs:attribute name="ordered_items" type="xs:int" />
-            <xs:attribute name="courier_demand" type="xs:int" />
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="customer" minOccurs="1" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="name" />
-              <xs:element ref="terulet" />
-              <xs:element name="address" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element ref="postalCode" />
-                    <xs:element ref="street" />
-                    <xs:element ref="houseNumber" />
-                    <xs:element ref="doorNumber" />
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element> 
-              <xs:element ref="phoneNumber" />
-              <xs:element ref="email" />
-              <xs:element ref="regularCustomer" />
-            </xs:sequence>
-            <xs:attribute name="customer_id" type="xs:int" />
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
+        <xs:key name="ingredient_kulcs">
+            <xs:selector xpath="ingredients" />
+            <xs:field xpath="@ingredient_id" />
+        </xs:key>
 
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="courier" minOccurs="1" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="name" />
-              <xs:element ref="phoneNumber" />
-              <xs:element ref="transportType" />
-              <xs:element ref="isActive" />
-            </xs:sequence>
-            <xs:attribute name="courier_id" type="xs:int" />
-            <xs:attribute name="courier_demand" type="xs:int" />
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
+        <xs:key name="product_kulcs">
+            <xs:selector xpath="product" />
+            <xs:field xpath="@product_id" />
+        </xs:key>
+        
+        <xs:key name="order_kulcs">
+            <xs:selector xpath="order" />
+            <xs:field xpath="@order_id" />
+        </xs:key>
 
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="made_of" minOccurs="1" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:attribute name="ingredient_id" type="xs:int" />
-            <xs:attribute name="product_id" type="xs:int" />
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
+        <xs:key name="customer_kulcs">
+            <xs:selector xpath="customer" />
+            <xs:field xpath="@customer_id" />
+        </xs:key>
 
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="ordered_items" minOccurs="1" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="orderingDate" />
-            </xs:sequence>
-            <xs:attribute name="order_id" type="xs:int" />
-            <xs:attribute name="product_id" type="xs:int" />
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
+        <xs:key name="courier_kulcs">
+            <xs:selector xpath="courier" />
+            <xs:field xpath="@courier_id" />
+        </xs:key>
 
-    <!--Kulcsok-->
+        <!--Idegen kulcsok-->
 
-    <xs:key name="ingrediences_key">
-      <xs:selector xpath="ingrediences" />
-      <xs:field xpath="@ingrediences_id" />
-    </xs:key>
+        <xs:keyref refer="ingredient_kulcs" name="made_of_ingredient_idegen_kulcs">
+            <xs:selector xpath="made_of" />
+            <xs:field xpath="@ingredient_id" />
+        </xs:keyref>
 
-    <xs:key name="product_key">
-      <xs:selector xpath="product" />
-      <xs:field xpath="@product_id" />
-    </xs:key>
+        <xs:keyref refer="product_kulcs" name="made_of_product_idegen_kulcs">
+            <xs:selector xpath="made_of" />
+            <xs:field xpath="@product_id" />
+        </xs:keyref>
 
-    <xs:key name="order_key">
-      <xs:selector xpath="order" />
-      <xs:field xpath="@order_id" />
-    </xs:key>
+        <xs:keyref refer="order_kulcs" name="ordered_items_idegen_kulcs">
+            <xs:selector xpath="ordered_items" />
+            <xs:field xpath="@order_id" />
+        </xs:keyref>
 
-    <xs:key name="customer_key">
-      <xs:selector xpath="customer" />
-      <xs:field xpath="@customer_id" />
-    </xs:key>
+        <xs:keyref refer="order_kulcs" name="create_order_idegen_kulcs">
+            <xs:selector xpath="customer" />
+            <xs:field xpath="@create_order" />
+        </xs:keyref>
 
-    <xs:key name="courier_key">
-      <xs:selector xpath="courier" />
-      <xs:field xpath="@courier_id" />
-    </xs:key>
+        <xs:keyref refer="order_kulcs" name="courier_demand_idegen_kulcs">
+            <xs:selector xpath="courier" />
+            <xs:field xpath="@courier_demand" />
+        </xs:keyref>
 
-    <xs:key name="made_of">
-      <xs:selector xpath="made_of" />
-      <xs:field xpath="@made_of_id" />
-    </xs:key>
+        <!--1:1-->
 
-    <xs:key name="ordered_items">
-      <xs:selector xpath="ordered_items" />
-      <xs:field xpath="@ordered_items_id" />
-    </xs:key>
+        <xs:unique name="create_order">
+            <xs:selector xpath="customer" />
+            <xs:field xpath="@create_order" />
+        </xs:unique>
 
-    <!--Idegen Kulcsok-->
-
-    <xs:keyref refer="tanc_kulcs" name="tanc_idegen_kulcs">
-      <xs:selector xpath="csoport" />
-      <xs:field xpath="@produkcio" />
-    </xs:keyref>
-
-  </xs:element>
-  
-
+    </xs:element>
 
 </xs:schema>
