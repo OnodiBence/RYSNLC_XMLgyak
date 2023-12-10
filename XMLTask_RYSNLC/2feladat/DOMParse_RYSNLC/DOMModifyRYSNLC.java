@@ -38,23 +38,6 @@ public class DOMModifyRYSNLC {
 			Node nodeAttr = attr.getNamedItem("order_id");
 			nodeAttr.setTextContent("4");
 
-			// order date módosítása
-			NodeList list = csoport.getChildNodes();
-
-			for (int i = 0; i < list.getLength(); i++) {
-				Node node = list.item(i);
-
-				if (node.getNodeType() == Node.ELEMENT_NODE) {
-					Element eElement = (Element) node;
-
-					if ("date".equals(eElement.getNodeName())) {
-						if ("2023.01.15".equals(eElement.getTextContent())) {
-							eElement.setTextContent("2023.12.12");
-						}
-					}
-				}
-			}
-
 			// order item módosítás
 			NodeList kszList = doc.getElementsByTagName("ordered_items");
 
