@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DTD Megvalósítás</title>
+  </head>
+  <body>
+    <RYSNLC_modell>
+      <a a="id1">
+        <b>
+          <x>Data 1</x>
+          <y>Data 2</y>
+        </b>
+        <c>
+          <d>Data 3</d>
+          <e>Data 4</e>
+        </c>
+      </a>
+      <b a="id2" Cref="id1">
+        <b>
+          <x>Data 5</x>
+          <y>Data 6</y>
+        </b>
+      </b>
+      <C a="id3">
+        <b>Data 7</b>
+      </C>
+      <AB Aref="id1" Bref="id2">
+        <c>Data 8</c>
+      </AB>
+    </RYSNLC_modell>
+  </body>
+</html>
