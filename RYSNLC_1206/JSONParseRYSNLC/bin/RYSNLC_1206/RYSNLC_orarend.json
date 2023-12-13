@@ -1,0 +1,116 @@
+{
+    "F4IIYA_orarend": {
+      "ora": [
+        {
+          "targy": "Pénzügytan",
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "10:00",
+            "ig": "12:00"
+          },
+          "helyszin": "XXXVII A3 A5 között",
+          "oktato": "Dr. Bozsik Sándor",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "WEB technológiák",
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "14:00",
+            "ig": "16:00"
+          },
+          "helyszin": "XXX A1 305",
+          "oktato": "Agárdi Anita",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "Számvitel",
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "08:00",
+            "ig": "10:00"
+          },
+          "helyszin": "VIII A1 1.em. 115",
+          "oktato": "Dr. Pál Tibor",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "Mesterséges intelligencia",
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "10:00",
+            "ig": "12:00"
+          },
+          "helyszin": "I A2 fsz.",
+          "oktato": "Fazekas Levente",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "Adatkezelés XML-ben",
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "8:00",
+            "ig": "10:00"
+          },
+          "helyszin": "XXXII A1",
+          "oktato": "Dr. Bednarik László",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "Pénzügytan",
+          "idopont": {
+            "nap": "Szerda",
+            "tol": "08:00",
+            "ig": "10:00"
+          },
+          "helyszin": "A1 204",
+          "oktato": "Dr. Süveges Gábor",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "Adatkezelés XML-ben",
+          "idopont": {
+            "nap": "Szerda",
+            "tol": "10:00",
+            "ig": "12:00"
+          },
+          "helyszin": "Info 102",
+          "oktato": "Bednarik László",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "Vállalati információs rendszerek",
+          "idopont": {
+            "nap": "Szerda",
+            "tol": "14:00",
+            "ig": "16:00"
+          },
+          "helyszin": "Info 101",
+          "oktato": "Dr. Sasvári Péter",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "Termelésmenedzsment",
+          "idopont": {
+            "nap": "Szerda",
+            "tol": "16:00",
+            "ig": "18:00"
+          },
+          "helyszin": "XXXVII A3 A5 között",
+          "oktato": "Dr. Berényi László",
+          "szak": "Gazdaságinformatikus"
+        },
+        {
+          "targy": "Mesterséges intelligencia",
+          "idopont": {
+            "nap": "Péntek",
+            "tol": "10:00",
+            "ig": "12:00"
+          },
+          "helyszin": "I A2",
+          "oktato": "Fazekas Levente",
+          "szak": "Gazdaságinformatikus"
+        }
+      ]
+    }
+  }
